@@ -125,11 +125,7 @@ func (p *Proto) ReadWebsocket(wr *websocket.Conn) (err error) {
 }
 
 func (p *Proto) WriteWebsocket(wr *websocket.Conn) (err error) {
-
-	if p.Body == nil || len(p.Body) == 0 {
-		return
-	}
-
+	
 	var (
 		head uint8
 	)
